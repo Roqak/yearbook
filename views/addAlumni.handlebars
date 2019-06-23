@@ -1,0 +1,105 @@
+{{!-- 
+<form class="form-group" action="/addAlumni" method="POST">
+        <input type="text" placeholder="Firstname" name="firstname"><br>
+        <input type="text" placeholder="Lastname" name="lastname"><br>
+        <input type="text" placeholder="location" name="location"><br>
+        <input type="tel" placeholder="Phone" name="phone"><br>
+        <input type="mail" placeholder="email" name="email"><br>
+        <textarea name="description"></textarea>
+        <button type="submit">Submit</button>
+</form> --}}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+            {{!-- <h2 class="text-center mb-5">Bootstrap 4 Forms</h2> --}}
+            
+            
+            <div class="row">
+                {{!-- <div class="col-md-6 offset-md-3">
+                    <span class="anchor" id="formLogin"></span>
+
+                    <!-- form card login with validation feedback -->
+                    
+                    <!-- /form card login -->
+
+                </div> --}}
+                
+                
+                
+                
+                <!--/col-->
+                
+                <!--/col-->
+                <div class="col-md-6 offset-md-3">
+                    <span class="anchor" id="formContact"></span>
+                    {{!-- <hr class="my-5"> --}}
+
+                    <!-- form user info -->
+                    <div class="card card-outline-secondary">
+                        <div class="card-header">
+                            <h3 class="mb-0">Add Alumni</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="form" role="form" autocomplete="off" action="/addAlumni" method="POST">
+                                <fieldset>
+                                    <label for="firstname" class="mb-0">Firstname</label>
+                                    <div class="row mb-1">
+                                        <div class="col-lg-12">
+                                            <input type="text" name="firstname" id="firstname" class="form-control" required="">
+                                        </div>
+                                    </div>
+                                    <label for="lastname" class="mb-0">Lastname</label>
+                                    <div class="row mb-1">
+                                        <div class="col-lg-12">
+                                            <input type="text" name="lastname" id="lastname" class="form-control" required="">
+                                        </div>
+                                    </div>
+                                    <label for="email" class="mb-0">Email</label>
+                                    <div class="row mb-1">
+                                        <div class="col-lg-12">
+                                            <input type="text" name="email" id="email" class="form-control" required="">
+                                        </div>
+                                    </div>
+                                    <label for="location" class="mb-0">Location</label>
+                                    <div class="row mb-1">
+                                        <div class="col-lg-12">
+                                            <input type="text" name="location" id="location" class="form-control" required="">
+                                        </div>
+                                    </div>
+                                    <label for="location" class="mb-0">Phone</label>
+                                    <div class="row mb-1">
+                                        <div class="col-lg-12">
+                                            <input type="tel" name="phone" id="phone" class="form-control" required="">
+                                        </div>
+                                    </div>
+                                    <label for="bio" class="mb-0">Bio</label>
+                                    <div class="row mb-1">
+                                        <div class="col-lg-12">
+                                            <textarea rows="6" name="description" id="bio" class="form-control" required=""></textarea>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-secondary btn-lg float-right">Submit</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /form user info -->
+
+                </div>
+                <!--/col-->
+
+                
+
+            </div>
+            <!--/row-->
+
+        <br><br><br><br>
+
+        </div>
+        <!--/col-->
+    </div>
+    <!--/row-->
+    
+    
+    
+</div>
