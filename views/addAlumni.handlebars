@@ -8,6 +8,8 @@
         <textarea name="description"></textarea>
         <button type="submit">Submit</button>
 </form> --}}
+<script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+
 <div class="container py-5">
     <div class="row">
         <div class="col-md-12">
@@ -78,7 +80,8 @@
                                             <textarea rows="6" name="description" id="bio" class="form-control" required=""></textarea>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-secondary btn-lg float-right">Submit</button>
+                                    {{!-- <button type="submit" class="btn btn-secondary btn-lg float-right">Submit</button> --}}
+                                    <button id="changepicture2" style="border: 1px #038bd4 solid; border-radius: 10px; width: 100%" class="btn btn-white">Update Picture</button>
                                 </fieldset>
                             </form>
                         </div>
@@ -103,3 +106,23 @@
     
     
 </div>
+
+<script type="text/javascript">
+    var myWidget = cloudinary.createUploadWidget({
+            cloudName: 'akin',
+            uploadPreset: 'w75i41lo',
+            maxFiles: 1,
+            invalidate: true
+            // autoMinimize: true
+        },
+        (error, result) => {
+            // console.log(error, result)
+             if (!error && result && result.event === "success") { 
+      console.log('Done! Here is the image info: ', result.info); 
+    }
+        });
+
+    document.getElementById("changepicture2").addEventListener("click", function(){
+        myWidget.open();
+    }, false);
+    </script>

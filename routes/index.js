@@ -29,5 +29,8 @@ Router.post('/addAlumni',(req,res)=>{
 Router.get('/addAlumni',(req,res)=>{
     res.render('addAlumni')
 })
+Router.get('/image',(req,res)=>{
+    res.send('Uploaded')
+})
 
 module.exports = Router;
