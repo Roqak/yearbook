@@ -36,5 +36,5 @@ const AlumniSchema = new Schema({
         type: String,
         required: true
     }
-})
+});
 module.exports = Alumni = mongoose.model('alumni',AlumniSchema);
