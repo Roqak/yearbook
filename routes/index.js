@@ -3,8 +3,10 @@ const Alumni = require('../Model/Alumni');
 
 
 
-Router.get('/',(req,res)=>{
-    res.render('home')
+Router.get('/',async (req,res)=>{
+    let allAlumni = await Alumni.find({})
+    // res.json(allAlumni)
+    res.render('home',{data:allAlumni})
 });
 
 

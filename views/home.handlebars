@@ -120,7 +120,8 @@
     <section class="hotel-rooms spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6">
+                {{#each data}}
+                {{!-- <div class="col-lg-4 col-md-6">
                     <div class="room-items">
                         <div class="room-img set-bg" data-setbg="img/rooms/1.jpg" style="background-image: url(&quot;img/rooms/1.jpg&quot;);">
                             <a href="#" class="room-content">
@@ -145,12 +146,44 @@
                             </div>
                             <div class="room-price">
                                 <p>Phone Number</p>
-                                <span>0810000100010001</span>
+                                <span>0810000100010001 {{data}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> --}}
+                <div class="col-lg-4 col-md-6">
+                    <div class="room-items">
+                        <div class="room-img set-bg" data-setbg="img/rooms/1.jpg" style="background-image: url(&quot;img/rooms/1.jpg&quot;);">
+                            <a href="#" class="room-content">
+                                <i class="fa fa-facebook social-space"></i>
+                            </a>
+                            <!-- <a href="#" class="room-content">
+                                <i class="fa fa-facebook social-space"></i>
+                            </a> -->
+                        </div>
+                        <div class="room-text">
+                            <div class="room-details">
+                                <div class="room-title">
+                                    <h5>{{Firstname}} {{Lastname}}</h5>
+                                    <i><i class="flaticon-placeholder"></i> <span>{{Location}}</span></i>
+                                    <i class="large-width"><i class="flaticon-clock"></i> <span>June 21</span></i>
+                                </div>
+                            </div>
+                            <div class="room-features">
+                                <div class="room-info">
+                                    <p> {{Description}} </p>
+                                </div>
+                            </div>
+                            <div class="room-price">
+                                <p>Phone Number</p>
+                                <span>{{Phone}}</span>
                             </div>
                         </div>
                     </div>
                 </div>
+                {{/each}}
             </div>
+            
         </div>
     </section>
     <section class="newslatter-section">
